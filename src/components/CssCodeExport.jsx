@@ -11,7 +11,7 @@ export function CssCodeExport() {
         codeAsString += `:root {\n`;
 
         currentTheme.colours.forEach(colourObj => {
-            codeAsString += `\t--${colourObj.themeName}: ${colourObj.hex};\n`
+            codeAsString += `\t--${colourObj.themeName}-${colourObj.strength}: ${colourObj.hex};\n`
         })
 
         codeAsString += `}`;
@@ -24,6 +24,10 @@ export function CssCodeExport() {
             <SyntaxHighlighter>
                 {buildCssVariableString()}
             </SyntaxHighlighter>
+
+            <button onClick={() => navigator.clipboard.writeText(buildCssVariableString())}>
+                Copy code to clipboard
+            </button>
         </div>
     )
 }
