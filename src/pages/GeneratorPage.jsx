@@ -33,15 +33,14 @@ export default function GeneratorPage(){
 	return(
 		<div>
 			<PureModal
-				header="Your header"
+				header={currentTheme.displayName}
 				footer={
 					<div>
-					<button>Cancel</button>
-					<button>Save</button>
+						<h6>Thank you for generating some colours!</h6>
 					</div>
 				}
 				isOpen={modal}
-				closeButton="close"
+				closeButton="X"
 				closeButtonPosition="bottom"
 				onClose={() => {
 					setModal(false);
