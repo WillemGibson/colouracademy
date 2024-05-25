@@ -1,53 +1,52 @@
-# ColourAcademy - CSS Variable Generator Website 
+# ColourAcademy - CSS Variable Generator Website
 
-## Routes 
+- [x] CSS variable export (high priority)
+- [x] Fix the width of the modal
+- [ ] save themes to a list of themes (medium priority)
+- [ ] preview components like UI Colours (nice-to-have)
+- [x] Dark/light mode toggle in global context
+- [x] Deploy
+  - [x] show the thing that Netlify needs to make React Router work
+
+## Routes
 
 - "/" : homepage
-	- CSS generator available here 
-- "/generator" - CSS generator page 
-	- CSS generator available here 
-- "/generator/saved" - view list of saved themes 
-	- reads localstorage 
+  - CSS generator available here
+- "/generator" - CSS generator page
+  - CSS generator available here
+- "/generator/saved" - view list of saved themes
+  - reads localstorage
 
+## Contexts
 
-## Contexts 
-
-- Base Colour 
-	- hex colour of new theme 
+- Base Colour
+  - hex colour of new theme
 - Current CSS theme
-	- one theme list 
-	- localstorage 
+  - one theme list
+  - localstorage
 - List of CSS themes
-	- array of theme list
-	- localstorage 
+  - array of theme list
+  - localstorage
 
+## Data
 
-
-
-## Data 
-
-### Colour Object 
+### Colour Object
 
 ```js
 {
-	hex: "#000000",
-	strength: 100,
-	rgba: [255, 255, 255, 255]
+  hex: "#000000",
+  strength: 100,
+  rgba: [255, 255, 255, 255]
 }
 ```
 
-### Theme List 
+### Theme List
 
 ```js
 {
-	name: "violet eggplant"
-	colours: [
-		Colour Objects go here 
-	]
+  name: "violet eggplant"
+  colours: [
+    Colour Objects go here 
+  ]
 }
 ```
-
-
-# Note for Next Lesson
-
-- [x] Alex needs to find the autoimport package and share that 
