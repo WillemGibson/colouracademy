@@ -1,33 +1,35 @@
-import SyntaxHighlighter from "react-syntax-highlighter/dist/esm/default-highlight";
 import { useCurrentThemeData } from "../contexts/currentThemeContext"
+import SyntaxHighlighter from "react-syntax-highlighter";
 
-export function CssCodeExport() {
-    let currentTheme = useCurrentThemeData();
-    
-    const buildCssVariableString = () => {
-        // Iterate over all colour objects in currentTheme
-        // and build a CSS snippet as a string
-        let codeAsString = "";
-        codeAsString += `:root {\n`;
+export function CssCodeExport(){
 
-        currentTheme.colours.forEach(colourObj => {
-            codeAsString += `\t--${colourObj.themeName}-${colourObj.strength}: ${colourObj.hex};\n`
-        })
+	let currentTheme = useCurrentThemeData();
 
-        codeAsString += `}`;
-        return codeAsString;
-    }
+	const buildCssVariableString = () => {
+		// Iterate over all colour objects in currentTheme
+		// and build a CSS snippet as a string 
+		let codeAsString = "";
+		codeAsString += `:root {\n`;
 
-    return (
-        <div>
-            <h1>Your CSS code is here...</h1>
-            <SyntaxHighlighter>
-                {buildCssVariableString()}
-            </SyntaxHighlighter>
+		currentTheme.colours.forEach(colourObj => {
+			codeAsString += `\t--${colourObj.themeName}-${colourObj.strength}: ${colourObj.hex};\n`
+		})
 
-            <button onClick={() => navigator.clipboard.writeText(buildCssVariableString())}>
-                Copy code to clipboard
-            </button>
-        </div>
-    )
+		codeAsString += `}`;
+		return codeAsString;
+	}
+
+	return (
+		<div>
+			<h1>Your CSS code is here...</h1>
+
+			<SyntaxHighlighter>
+				{buildCssVariableString()}
+			</SyntaxHighlighter>
+
+			<button onClick={() => navigator.clipboard.writeText(buildCssVariableString())}>
+				Copy code to clipboard
+			</button>
+		</div>
+	)
 }

@@ -7,6 +7,7 @@ import PureModal from 'react-pure-modal';
 import 'react-pure-modal/dist/react-pure-modal.min.css';
 import { CssCodeExport } from "../components/CssCodeExport";
 
+
 export default function GeneratorPage(){
 
 	const [modal, setModal] = useState(false);
@@ -20,6 +21,7 @@ export default function GeneratorPage(){
 
 	// Base colour from form 
 	let [formBaseColour, setFormBaseColour] = useState(baseColourGlobal);
+
 
 	// On component mount, set local form value to global state value 
 	useEffect(() => {
@@ -37,7 +39,7 @@ export default function GeneratorPage(){
 				header={currentTheme.displayName}
 				footer={
 					<div>
-						<h6>Thank you for generating some colours!</h6>
+					<h6>Thankyou for generating some colours!</h6>
 					</div>
 				}
 				isOpen={modal}
@@ -47,10 +49,9 @@ export default function GeneratorPage(){
 					setModal(false);
 					return true;
 				}}
-				>
-					<CssCodeExport />
-				<p>Your content</p>
-			</PureModal>;
+			>
+				<CssCodeExport />
+			</PureModal>
 			<button onClick={() => setModal(!modal)}>
 				Toggle Modal
 			</button>
@@ -66,4 +67,5 @@ export default function GeneratorPage(){
 			})}
 		</div>
 	)
+
 }

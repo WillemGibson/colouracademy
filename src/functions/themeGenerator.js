@@ -47,7 +47,7 @@ export function generateTones(baseColour, themeName = ""){
 
 	let finalizedOutput = {
 		name: newThemeName, // fern-green
-		displayName: themeName || colorblender(baseColour).name(), // Fern Green
+		displayName: themeName || colorblender(baseColour).name(), // Fern Green 
 		colours: []
 	}
 
