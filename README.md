@@ -1,4 +1,4 @@
-# ColourAcademy - CSS Variable Generator Website
+# 🎨 ColourAcademy - CSS Variable Generator Website
 
 - [x] CSS variable export (high priority)
 - [x] Fix the width of the modal
@@ -8,7 +8,7 @@
 - [x] Deploy
   - [x] show the thing that Netlify needs to make React Router work
 
-## Routes
+## 🛣️ Routes
 
 - "/" : homepage
   - CSS generator available here
@@ -17,7 +17,7 @@
 - "/generator/saved" - view list of saved themes
   - reads localstorage
 
-## Contexts
+## 📄 Contexts
 
 - Base Colour
   - hex colour of new theme
@@ -28,7 +28,7 @@
   - array of theme list
   - localstorage
 
-## Data
+## 📈 Data
 
 ### Colour Object
 
