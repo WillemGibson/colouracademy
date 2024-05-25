@@ -15,6 +15,12 @@ code {
     monospace;
 }
 
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  justify-content: space-between;
+}
 
 .pure-modal-backdrop {
   div.pure-modal {
