@@ -1,6 +1,5 @@
 import { DarkModeToggleButton } from "./DarkModeToggleButton";
-import "../styles/footer.css"
-
+import "../styles/Footer.css";
 
 export default function Footer(){
 
